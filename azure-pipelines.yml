@@ -10,12 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: AzureAppServiceSettings@1
   inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: false
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    azureSubscription: 'Free Trial(afe685a4-da11-434e-9b22-5913a462ede0)'
+    appName: 'Test'
+    resourceGroupName: 'Test'
